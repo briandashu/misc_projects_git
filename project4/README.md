@@ -1,8 +1,6 @@
-# Project 4: Regular Expression Interpreter
+Regular Expression Interpreter
 
-Due: April 2 (Late: April 3) at 11:59:59 PM
 
-Points: 35P/35R/30S
 
 ## Overview
 
@@ -14,13 +12,6 @@ In class we implemented a Regular Expression Interpreter through a series of red
 
 Here's how the parts can be assembled into an Interpreter. In Part I you'll simulate an NFA. You can do that directly, or you can use Part II to convert to a DFA and then assume you have a DFA to simulate. In Part II you'll implement an NFA to DFA converter. In Part III you'll convert a RegExp to an NFA. You can put these parts together to create an Interpreter: Input a RegExp to Part III to create an NFA, and then input that NFA and a string to Part I to simulate the resulting NFA. Or, input that NFA to Part II to get a DFA, then since the class of DFAs is a subset of NFAs, input that DFA to Part I to simulate it. You aren't required to create these workflows, as we'll test each part independently, but you can experiment with them. (Note that the same Ocaml type, `nfa_t`, is used for both NFAs and DFAs in this project, so the function to convert an NFA to a DFA takes an `nfa_t` to an `nfa_t`.) 
 
-### Ground Rules
-
-To begin this project, you will need to commit any uncommitted changes to your local branch and pull updates from the git repository. [Click here][git instructions] for directions on working with the Git repository.
-
-This is NOT a pair project. You must work on this project alone as with most other CS projects. See the Academic Integrity section for more information. In your code, you may use __any__ non-imperative standard library functions (with the exception of printing, see below), but the ones that will be useful to you will be found in the [`Pervasives`][pervasives doc], [`List`][list doc] and [`String`][string doc] modules. The only imperative feature you may use is the provided `fresh` function in Part 3. You will receive a 0 for any functions using restricted features - we will be checking your code!
-
-Several helper functions have been provided for you, as detailed at the end of this document. We have also provided a `Sets` module that correctly implements the functions from [Project 2A][project 2a].
 
 ## Part 1: NFAs
 
@@ -294,23 +285,6 @@ You are not required to do this, but it may be helpful in debugging your code. O
 4. You should be notified that the image has been successfully generated and put in `output.png`.
 5. Use an image viewer of choice to open `output.png` and see the visual representation of your generated NFA.
 
-## Project Submission
-You should submit the files `nfa.ml` and `regexp.ml` containing your solution. You may submit other files, but they will be ignored during grading. We will run your solution as individual OUnit tests just as in the provided public test file.
-
-**If you submit your entire directory ENSURE you do `dune clean` before submitting or it will not compile**
-
-Be sure to follow the project description exactly! Your solution will be graded automatically, so any deviation from the specification will result in lost points.
-
-You can submit your project in two ways:
-
-* Submit your files directly to the [submit server][submit server] by clicking on the submit link in the column next to the project number. Then, use the submit dialog to submit all your files.
-Select your file using the "Browse" button, then press the "Submit project!" button. You do not need to put it in a zip file.
-![Upload your file][web upload example]
-* Submit directly by executing a the submission script on a computer with Java and network access. Included in this project are the submission scripts and related files listed under Project Files. These files should be in the directory containing your project. From there you can either execute `ruby submit.rb` or run the command `java -jar submit.jar` directly (this is all submit.rb does).
-No matter how you choose to submit your project, make sure that your submission is received by checking the [submit server][submit server] after submitting.
-
-## Academic Integrity
-Please **carefully read** the academic honesty section of the course syllabus. **Any evidence** of impermissible cooperation on projects, use of disallowed materials or resources, or unauthorized use of computer accounts, **will** be submitted to the Student Honor Council, which could result in an XF for the course, or suspension or expulsion from the University. Be sure you understand what you are and what you are not permitted to do in regards to academic integrity when it comes to project assignments. These policies apply to all students, and the Student Honor Council does not consider lack of knowledge of the policies to be a defense for violating them. Full information is found in the course syllabus, which you should review before starting.
 
 [list doc]: https://caml.inria.fr/pub/docs/manual-ocaml/libref/List.html
 [string doc]: https://caml.inria.fr/pub/docs/manual-ocaml/libref/String.html
