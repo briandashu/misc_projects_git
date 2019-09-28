@@ -1,0 +1,19 @@
+# dune runtest -f
+# OCAMLPARAM: unset
+$ /usr/local/bin/nproc > /var/folders/dm/3kslprps6b736vz2bgdqpwx00000gn/T/dune00065d.output 2> /dev/null
+$ /Users/brian/.opam/4.07.0/bin/ocamlc.opt -config > /var/folders/dm/3kslprps6b736vz2bgdqpwx00000gn/T/dune335787.output
+$ (cd _build/default && /Users/brian/.opam/4.07.0/bin/ocamlc.opt -w -40 -g -bin-annot -I src/.p4.objs -I src/.p4.objs/.private -I /Users/brian/cmsc330spring19-public/project4/dep4.07.0/sets -no-alias-deps -open P4 -o src/.p4.objs/p4__Nfa.cmi -c -intf src/nfa.mli)
+$ (cd _build/default && /Users/brian/.opam/4.07.0/bin/ocamlc.opt -w -40 -g -bin-annot -I src/.p4.objs -I src/.p4.objs/.private -I /Users/brian/cmsc330spring19-public/project4/dep4.07.0/sets -no-alias-deps -open P4 -o src/.p4.objs/p4__Regexp.cmi -c -intf src/regexp.mli)
+$ (cd _build/default && /Users/brian/.opam/4.07.0/bin/ocamlc.opt -w -40 -g -bin-annot -I src/.p4.objs -I src/.p4.objs/.private -I /Users/brian/cmsc330spring19-public/project4/dep4.07.0/sets -intf-suffix .ml -no-alias-deps -open P4 -o src/.p4.objs/p4__Nfa.cmo -c -impl src/nfa.ml)
+$ (cd _build/default && /Users/brian/.opam/4.07.0/bin/ocamlc.opt -w -40 -g -bin-annot -I src/.p4.objs -I src/.p4.objs/.private -I /Users/brian/cmsc330spring19-public/project4/dep4.07.0/sets -intf-suffix .ml -no-alias-deps -open P4 -o src/.p4.objs/p4__Regexp.cmo -c -impl src/regexp.ml)
+$ (cd _build/default && /Users/brian/.opam/4.07.0/bin/ocamlc.opt -w -40 -g -bin-annot -I test/.public.eobjs -I /Users/brian/.opam/4.07.0/lib/bytes -I /Users/brian/.opam/4.07.0/lib/oUnit -I /Users/brian/cmsc330spring19-public/project4/dep4.07.0/sets -I src/.p4.objs -no-alias-deps -o test/.public.eobjs/testUtils.cmo -c -impl test/testUtils.ml)
+$ (cd _build/default && /Users/brian/.opam/4.07.0/bin/ocamlc.opt -w -40 -g -bin-annot -I test/.public.eobjs -I /Users/brian/.opam/4.07.0/lib/bytes -I /Users/brian/.opam/4.07.0/lib/oUnit -I /Users/brian/cmsc330spring19-public/project4/dep4.07.0/sets -I src/.p4.objs -no-alias-deps -o test/.public.eobjs/student.cmo -c -impl test/student.ml)
+$ (cd _build/default && /Users/brian/.opam/4.07.0/bin/ocamlc.opt -w -40 -g -bin-annot -I test/.public.eobjs -I /Users/brian/.opam/4.07.0/lib/bytes -I /Users/brian/.opam/4.07.0/lib/oUnit -I /Users/brian/cmsc330spring19-public/project4/dep4.07.0/sets -I src/.p4.objs -no-alias-deps -o test/.public.eobjs/public.cmo -c -impl test/public.ml)
+$ (cd _build/default/test && ./public.bc)
+> .........
+> Ran: 9 tests in: 0.11 seconds.
+> OK
+$ (cd _build/default/test && ./student.bc)
+> .
+> Ran: 1 tests in: 0.11 seconds.
+> OK
